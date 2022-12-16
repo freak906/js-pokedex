@@ -11,3 +11,11 @@ let pokemonList = [ {
     height: 1.6,
     types: ['flying', 'insomnia', 'keen-eye']
 }];
+let big = " - Wow, that's big!";
+for (let i = 0; i < pokemonList.length; i++){
+    if (pokemonList[i].height > 1.6){
+        document.write(pokemonList[i].name + ' ' + '(height: ' + pokemonList[i].height + ')' + big + '<br>' );
+    }else{
+        document.write(pokemonList[i].name + ' ' + '(height: ' + pokemonList[i].height + ')' + '<br>');
+    }
+}
