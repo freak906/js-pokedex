@@ -1,31 +1,42 @@
 let pokemonRepository = (function(){
-let pokemonList = [ {
+let pokemonList = [{
     name: 'Scyther',
-    height: 1.5,
-    types: ['bug', 'flying', 'swarm']
+    height: 4.11,
+    type: 'bug',
+    weaknesses: ['fire','ice','electric'] 
 },{
     name: 'Mewtwo',
-    height: 2,
-    types: ['psychic', 'pressure', 'unnerve']
+    height: 6.7,
+    type: 'psychic',
+    weaknesses: ['dark','bug','ghost']
 },{
     name: 'Noctowl',
-    height: 1.6,
-    types: ['flying', 'insomnia', 'keen-eye']
+    height: 5.3,
+    type: 'flying',
+    weaknesses: ['ice','rock','electric']
 }];
-    return {
-        add: function(item) {
+    function add(item) {
+        if (typeof item === "object" && item.name && item.height && item.type && item.weaknesses && Object.keys(item).length <= 4){
             pokemonList.push(item);
-        },
-        getAll: function(){
-            return pokemonList;
+        }else{
+            console.log('Make sure item is an object and has name, height, type and weaknesses properties');
         }
     }
+    function getAll(){
+        return pokemonList;
+    }
+    return {
+        getAll: getAll,
+        add: add
+    };
 })();
+
+let newPokemon = {name: 'Ninetales', height: 3.7, type: 'fire', weaknesses: ['water','ground','rock']};
 console.log(pokemonRepository.getAll());
-console.log(pokemonRepository.add({name: 'Ninetales', height: 3.7, types: ['fox', 'fire']}));
+console.log(pokemonRepository.add(newPokemon));
 
 pokemonRepository.getAll().forEach(function(pokemons) {
-    document.write('Name: ' + pokemons.name + ', ' + 'Height: '  + pokemons.height + ', ' + 'Type: ' + pokemons.types[1] + '<br>');
-    console.log('Name: ' + pokemons.name + ', ' + 'Height: '  + pokemons.height + ', ' + 'Type: ' + pokemons.types[1] + '<br>');
+    document.write('Name: ' + pokemons.name + ', ' + 'Height: '  + pokemons.height + ', ' + 'Type: ' + pokemons.type + ', ' + 'Weaknesses: ' + pokemons.weaknesses[0] + '<br>');
+    console.log('Name: ' + pokemons.name + ', ' + 'Height: '  + pokemons.height + ', ' + 'Type: ' + pokemons.type + ', ' + 'Weaknesses: ' + pokemons.weaknesses[0] + '<br>');
 });
 
