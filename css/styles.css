@@ -1,7 +1,38 @@
+:root{
+    --primary-color: #6bdaac;
+    --secondary-color: #231F7F;
+    --text-color: black;
+}
 body{
-    background-color: #6bdaac;
-    color: rgb(3, 2, 2);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     font-size: 20px;
-    line-height: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    line-height: 30px;
+}
+.pokemon-button{
+    background-color: var(--primary-color);
+    border-color:  rgb(0, 0, 0);
+    border-radius: 10px;
+    display: block;
+    font-size: 18px;
+    font-family: inherit;
+    margin: 5px auto auto;
+    height: 40px;
+    width: 200px;
+}
+button:hover{
+    background-color: rgb(223, 255, 17);
+    box-shadow: 0 0.5em 0.5em -0.4em rgb(2, 2, 1);
+    transition-duration: 1s;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.pokemon-list{
+    list-style: none;
+}
+h1{
+    margin-left: 30px;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
