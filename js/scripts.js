@@ -1,25 +1,11 @@
 let pokemonRepository = (function(){
-let pokemonList = [{
-    name: 'Scyther',
-    height: 4.11,
-    type: 'bug',
-    weaknesses: ['fire','ice','electric'] 
-},{
-    name: 'Mewtwo',
-    height: 6.7,
-    type: 'psychic',
-    weaknesses: ['dark','bug','ghost']
-},{
-    name: 'Noctowl',
-    height: 5.3,
-    type: 'flying',
-    weaknesses: ['ice','rock','electric']
-}];
+    let pokemonList = [];
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
     function add(pokemon) {
-        if (typeof pokemon === "object" && pokemon.name && pokemon.height && pokemon.type && pokemon.weaknesses && Object.keys(pokemon).length <= 4){
+        if (typeof pokemon === "object" && pokemon.name && Object.keys(pokemon).length <= 4){
             pokemonList.push(pokemon);
         }else{
-            console.log('Make sure item is an object and has name, height, type and weaknesses properties');
+            console.log('Make sure item is an object and has a name');
         }
     }
     function getAll(){
@@ -40,17 +26,57 @@ let pokemonList = [{
     function showDetails(pokemon){
         console.log(pokemon);
     }
+    //load pokemons
+    function loadList() {
+        return fetch(apiUrl).then(function (response) {
+          return response.json();
+        }).then(function (json) {
+          json.results.forEach(function (item) {
+            let pokemon = {
+              name: item.name,
+              detailsUrl: item.url
+            };
+            add(pokemon);
+          });
+        }).catch(function (e) {
+          console.error(e);
+        })
+      }
+      function loadDetails(item) {
+        let url = item.detailsUrl;
+        return fetch(url).then(function (response) {
+          return response.json();
+        }).then(function (details) {
+          // Now we add the details to the item
+          item.imageUrl = details.sprites.front_default;
+          item.height = details.height;
+          item.types = details.types;
+        }).catch(function (e) {
+          console.error(e);
+        });
+      }
+      function showDetails(item) {
+        pokemonRepository.loadDetails(item).then(function() {
+            console.log(item);
+        });
+      }
     return {
         getAll: getAll,
         add: add,
-        addListItem: addListItem
+        addListItem: addListItem,
+        loadList: loadList,
+        loadDetails: loadDetails,
+        showDetails: showDetails
     };
 })();
-//pushed a new pokemon in
+/*pushed a new pokemon in
 let newPokemon = {name: 'Ninetales', height: 3.7, type: 'fire', weaknesses: ['water','ground','rock']};
 console.log(pokemonRepository.getAll());
-console.log(pokemonRepository.add(newPokemon));
+console.log(pokemonRepository.add(newPokemon));*/
 
-pokemonRepository.getAll().forEach(function(pokemon){
-    pokemonRepository.addListItem(pokemon)
+pokemonRepository.loadList().then(function(){
+    pokemonRepository.getAll().forEach(function(pokemon){
+        pokemonRepository.addListItem(pokemon);
+    });
 });
+
