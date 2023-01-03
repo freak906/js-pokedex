@@ -59,7 +59,7 @@ let pokemonRepository = (function(){
       }
       
       let modalContainer = document.querySelector('#modal-container');
-      
+      //modal to display pokemons
       function showModal(pokemon){
           modalContainer.innerText = '';
 
