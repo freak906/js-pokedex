@@ -16,7 +16,7 @@ button:hover{
 }
 .pokemon-button{
     background-color: var(--primary-color);
-    border-color:  rgb(255, 255, 255);
+    border-color:  rgb(0, 0, 0);
     border-radius: 10px;
     font-size: 18px;
     font-family: inherit;
