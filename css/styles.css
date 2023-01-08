@@ -22,7 +22,7 @@ button:hover{
     font-family: inherit;
     margin: 5px auto auto;
     height: 50px;
-    width: 200px;
+    width: 150px;
 }
 .pokemon-button:hover{
     background-color: rgb(223, 255, 17);
@@ -43,7 +43,7 @@ button:hover{
 .pokemon-list{
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit,300px);
+    grid-template-columns: repeat(auto-fit,200px);
     text-align: center;
 }
 .pokemon-img{
