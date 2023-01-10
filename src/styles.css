@@ -40,6 +40,12 @@ button:hover{
     background-color: var(--secondary-color);
     border: none;
 }
+.pikachu{
+    display: block;
+    margin: auto auto;
+    margin-top: 50px;
+    text-align: center;
+}
 .pokemon-list{
     display: grid;
     justify-content: center;
@@ -51,9 +57,9 @@ button:hover{
     height: 150px;
 }
 h1{
-    text-shadow: 1px 1px 1px rgb(42, 39, 39);
-    margin-top: 90px;
+    text-shadow: 1px 1px 1px rgb(185, 234, 5);
     text-align: center;
+    margin-top: -55px;
 }
 .modal-header{
     background: var(--secondary-color);
