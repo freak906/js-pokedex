@@ -84,7 +84,7 @@ form, button {
     .pokemon-list{
         display: grid;
         text-align: center;
-        grid-template-columns: repeat(auto-fit, 170px); 
+        grid-template-columns: repeat(auto-fit, 150px); 
     }
     .pokemon-button{
         width: 120px;
