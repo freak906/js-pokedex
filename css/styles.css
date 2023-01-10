@@ -80,3 +80,13 @@ h1{
 form, button {
     border-radius: 6px;
 }
+@media all and (max-width: 400px){
+    .pokemon-list{
+        display: grid;
+        text-align: center;
+        grid-template-columns: repeat(auto-fit, 170px); 
+    }
+    .pokemon-button{
+        width: 120px;
+    }
+}
