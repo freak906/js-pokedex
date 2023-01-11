@@ -1,7 +1,6 @@
 :root{
     --primary-color: #6bdaac;
     --secondary-color: #231F7F;
-    --text-color: black;
 }
 body{
     background-color: var(--secondary-color);
@@ -16,7 +15,8 @@ button:hover{
 }
 .pokemon-button{
     background-color: var(--primary-color);
-    border-color:  rgb(0, 0, 0);
+    border-color:  rgb(210, 234, 28);
+    color: black;
     border-radius: 10px;
     font-size: 18px;
     font-family: inherit;
@@ -25,7 +25,7 @@ button:hover{
     width: 150px;
 }
 .pokemon-button:hover{
-    background-color: rgb(223, 255, 17);
+    background-color: rgb(213, 246, 0);
     box-shadow: 0 0.5em 0.5em -0.4em rgb(2, 2, 1);
     color: black;
     transition-duration: 1s;
@@ -57,7 +57,7 @@ button:hover{
     height: 150px;
 }
 h1{
-    text-shadow: 1px 1px 1px rgb(185, 234, 5);
+    text-shadow: 1px 1px 1px rgb(224, 245, 38);
     text-align: center;
     margin-top: -55px;
 }
@@ -85,6 +85,7 @@ h1{
 }
 form, button {
     border-radius: 6px;
+    color: black;
 }
 @media all and (max-width: 400px){
     .pokemon-list{
