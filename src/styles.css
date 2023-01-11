@@ -6,7 +6,7 @@ body{
     background-color: var(--secondary-color);
     color: var(--primary-color);
     font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Patrick Hand', cursive;
 }
 button:hover{
     background-color: rgb(213, 246, 0);
@@ -18,7 +18,7 @@ button:hover{
     border-color:  rgb(210, 234, 28);
     color: black;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 22px;
     font-family: inherit;
     margin: 5px auto auto;
     height: 50px;
@@ -35,6 +35,7 @@ button:hover{
 .navbar-custom, .navbar-brand, .nav-link{
     background-color: var(--primary-color);
     color: rgb(0, 0, 0);
+    font-size: 22px;
 }
 .list-group-item{
     background-color: var(--secondary-color);
@@ -57,7 +58,7 @@ button:hover{
     height: 150px;
 }
 h1{
-    text-shadow: 1px 1px 1px rgb(224, 245, 38);
+    text-shadow: 1px 1px 1px rgb(213, 246, 0);
     text-align: center;
     margin-top: -55px;
 }
@@ -68,6 +69,7 @@ h1{
 .modal-body{
     background: var(--secondary-color);
     text-align: center;
+    font-size: 25px;
 }
 .modal-body p{
     text-shadow: 0.5px 0.5px 0.5px black;
@@ -97,6 +99,6 @@ form, button {
     }
     .pokemon-button{
         width: 120px;
-        font-size: 15px;
+        font-size: 18px;
     }
 }
