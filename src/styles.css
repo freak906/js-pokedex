@@ -9,9 +9,9 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 button:hover{
+    background-color: rgb(213, 246, 0);
     box-shadow: 0 0.5em 0.5em -0.4em rgb(2, 2, 1);
     transition-duration: 1s;
-    color: rgb(0, 0, 0);
 }
 .pokemon-button{
     background-color: var(--primary-color);
@@ -85,7 +85,9 @@ h1{
 }
 form, button {
     border-radius: 6px;
-    color: black;
+    background-color: var(--primary-color);
+    color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
 }
 @media all and (max-width: 400px){
     .pokemon-list{
