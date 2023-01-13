@@ -9,9 +9,11 @@ let pokemonRepository = (function(){
             console.log('Make sure item is an object and has a name');
         }
     }
+
     function getAll(){
         return pokemonList;
     }
+
     function addListItem(pokemon){
         let pokemonList = $('.pokemon-list');
         let listItem = $('<li class="list-group-item"></li>');
@@ -38,6 +40,7 @@ let pokemonRepository = (function(){
           console.error(e);
         })
       }
+
       function loadDetails(item) {
         let url = item.detailsUrl;
         return fetch(url).then(function (response) {
@@ -52,11 +55,13 @@ let pokemonRepository = (function(){
           console.error(e);
         });
       }
+
        function showDetails(pokemon) {
          pokemonRepository.loadDetails(pokemon).then(function() {
              showModal(pokemon);
          });
        }
+       
       function showModal(pokemon){
         let modalBody = $('.modal-body');
         let modalTitle = $('.modal-title');
