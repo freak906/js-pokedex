@@ -13,8 +13,8 @@ View a list of items
 On user action (e.g., by clicking on a list item), view details for that item
 
 ## Links
-[My github page] https://github.com/freak906/js-pokedex
-[My project] https://freak906.github.io/js-pokedex/
+[My github page](https://github.com/freak906/js-pokedex)
+[My project](https://freak906.github.io/js-pokedex/)
 
 ## Programming Languages
 
