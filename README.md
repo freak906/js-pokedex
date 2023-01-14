@@ -1,4 +1,4 @@
-# js-firstApp
+# Pokedex
 Visualization of items and interaction with them through JS
 
 
