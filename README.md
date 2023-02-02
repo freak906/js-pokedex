@@ -18,9 +18,9 @@ To build a small web application with HTML, CSS, and JavaScript that loads data 
 + On user action (e.g., by clicking on a list item), view details for that item
 
 ## Links
-[Github page with code](https://github.com/freak906/js-pokedex)
+[Github page with code](https://github.com/nick-vns/js-pokedex)
 
-[Web-apllication](https://freak906.github.io/js-pokedex/)
+[Web-apllication](https://nick-vns.github.io/js-pokedex/)
 
 ## Programming Languages
 
